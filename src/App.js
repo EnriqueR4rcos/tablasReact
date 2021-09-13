@@ -1,4 +1,5 @@
 import './App.css';
+import Tabla1 from './components/Tabla1';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <option value="t10">Tabla del 10</option>
         </select>
         <button type="button" class="btn btn-success" >Aceptar</button>
+        <Tabla1></Tabla1>
     </div>
   );
 }
