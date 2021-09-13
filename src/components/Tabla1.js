@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Tablas = () => {
+const Tabla1 = () => {
     return (  );
 }
  
-export default Tablas;
+export default Tabla1;
