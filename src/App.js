@@ -1,6 +1,7 @@
 import './App.css';
 
 function App() {
+
   return (
     <div>
         <h1> Primer App de React </h1>
@@ -18,7 +19,7 @@ function App() {
         <option value="t9">Tabla del 9</option>
         <option value="t10">Tabla del 10</option>
         </select>
-        <button type="button" class="btn btn-success">Aceptar</button>
+        <button type="button" class="btn btn-success" >Aceptar</button>
     </div>
   );
 }
