@@ -18,6 +18,7 @@ function App() {
         <option value="t9">Tabla del 9</option>
         <option value="t10">Tabla del 10</option>
         </select>
+        <button type="button" class="btn btn-success">Aceptar</button>
     </div>
   );
 }
