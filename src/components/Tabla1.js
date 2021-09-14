@@ -1,87 +1,39 @@
 import React from "react";
 
-const Tabla1 = () => {
-  return (
-    <div>
-      <table class="table table-bordered border-primary" >
+const Tabla1 = (props) => {
+  if(props.valor !== null){
+    var calcula = []
+    for(var i=1; i<11;i++){
+      calcula.push(props.valor*i);
+    }
+    return ( 
+      <div>
+        <table className="table table-success table-striped" >
+            <thead>
+              <tr>
+              <th  colSpan = "5">Tabla del {props.valor}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {calcula.map((value,index)=>{
+                return(
+               <tr key={index}>
+                <td>{props.valor}</td>
+                <td>x</td>
+                <td>{index+1}</td>
+                <td>=</td>
+                <td>{value}</td>
+               </tr>
+                )
+              })}
+            </tbody>
+        </table>
+      </div>
+    );
 
-          <tr>
-            <th colSpan = "5">Tabla del 1</th>
-          </tr>
-
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>1</td>
-            <td>=</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>2</td>
-            <td>=</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>3</td>
-            <td>=</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>4</td>
-            <td>=</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>5</td>
-            <td>=</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>6</td>
-            <td>=</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>7</td>
-            <td>=</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>8</td>
-            <td>=</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>9</td>
-            <td>=</td>
-            <td>9</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>x</td>
-            <td>10</td>
-            <td>=</td>
-            <td>10</td>
-          </tr>
-      </table>
-    </div>
-  );
+  }else {
+    return(null);
+  }
 };
 
 export default Tabla1;
